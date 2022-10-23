@@ -1,9 +1,9 @@
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme .',
+  title: "butterflyBlog",
+  description: 'A simple blog .',
   dest: 'public',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/butterfly.png' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
@@ -14,7 +14,7 @@ module.exports = {
       { text: 'Docs', 
         icon: 'reco-message',
         items: [
-          { text: 'vuepress-reco', link: '/docs/theme-reco/' }
+          { text: 'vuepress-reco', link: '/docs/test/' }
         ]
       },
       { text: 'Contact', 
@@ -67,13 +67,13 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'reco_luan',
+    author: 'yangA',
     // 作者头像
     authorAvatar: '/avatar.png',
     // 备案号
-    record: 'xxxx',
+    // record: 'xxxx',
     // 项目开始时间
-    startYear: '2017'
+    startYear: '2020'
     /**
      * 密钥 (if your blog is private)
      */

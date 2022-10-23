@@ -1,7 +1,7 @@
 {
-  "name": "vuepress-theme-reco-demo",
+  "name": "vuepress-yangA-butterfly-Blog",
   "version": "1.0.0",
-  "author": "reco_luan",
+  "author": "yangaA",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build ."
