@@ -140,13 +140,13 @@ npm run build
 
 这里你可以使用阿里云、腾讯云提供的OOS服务，但是当然是白嫖咯。这里的方案以前有GitHub图床，但由于不明力量这样的访问会很慢，或许可以上传gitee？但现在gitee公开的仓库需要审查，很不方便。所以更推荐以下两方案。
 
-### PicGo下载
+### 4.1、PicGo下载
 
 地址 https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0
 
 下载安装即可
 
-### SM.MS图床
+### 4.2、SM.MS图床
 
 https://smms.app/
 
@@ -160,7 +160,7 @@ https://smms.app/
 
 ![image-20221027211000737](https://i0.hdslb.com/bfs/album/7ae03736d9f1d7b6edecb15c4c1bdf8d969e6cf5.png)
 
-### BiliBili图床
+### 4.3、BiliBili图床
 
 这个是聪明的网页发现的，并不是真的图床，需要PicGo插件，相对于smms更快，但是个人认为可能会丢失无价的数据
 
@@ -184,7 +184,7 @@ https://smms.app/
 
 ![image-20221027212332768](https://i0.hdslb.com/bfs/album/5d0b964310c4da339a96d76f6f3f54ef1e2855a2.png)
 
-### Typora偏好设置
+### 4.4、Typora偏好设置
 
 ![image-20221027210630266](https://i0.hdslb.com/bfs/album/b7a57d84eee904562293538bd4951f5069af5704.png)
 
