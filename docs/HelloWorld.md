@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: '2020-08-07'
+date: '2022-08-07'
 categories:   # 分类
  - 随笔
 tags:   # 标签
@@ -20,7 +20,7 @@ publish: true   # 发布
 
 作为一个优雅的程序员第一篇当然是Hello World咯，仅以此篇记录以下整个博客的搭建过程。
 
-![image-20221027192804828](https://i0.hdslb.com/bfs/album/2a4788277a2aac1bb3372de07c8ff3f99f7b025a.png)
+![image-20221027192804828](http://img.sybutterfly.top/img/202211142054259.png)
 
 ## 1、关于它
 
@@ -56,11 +56,11 @@ Git Clone后在本地VS打开
 
 在终端输入以下命令即可启动项目
 
-![image-20221027195627742](https://i0.hdslb.com/bfs/album/55382ff067f816e0195807c6e47798fc1a00ac14.png)
+![image-20221027195627742](http://img.sybutterfly.top/img/202211142054044.png)
 
 > 这里由于笔者已经修改了一些主题，所以显示会不一样。
 
-![image-20221027195645007](https://i0.hdslb.com/bfs/album/c74f85746562a08161eaf527625a535a411021da.png)
+![image-20221027195645007](http://img.sybutterfly.top/img/202211142053608.png)
 
 
 
@@ -92,21 +92,21 @@ Git Clone后在本地VS打开
 
 首先你需要在Github上新建一个仓库，将自个儿的代码提交到仓库中（这里不支持gitee），而后用GitHub账号登录Netlify
 
-![image-20221027201714262](https://i0.hdslb.com/bfs/album/692633b3bd7421e5c019e873ced9c5a030d40e5e.png)
+![image-20221027201714262](http://img.sybutterfly.top/img/202211142054086.png)
 
 
 
 > 从GitHub中导入你的项目
 
-![image-20221027202055733](https://i0.hdslb.com/bfs/album/0ff4215424d83c3b9a6751af5e8045e9fbe7994b.png)
+![image-20221027202055733](http://img.sybutterfly.top/img/202211142054188.png)
 
 > 选择你的博客项目
 
-![image-20221027202147933](https://i0.hdslb.com/bfs/album/d4b1de7be7a382ee7ab1beebfa80bfcd921a14e2.png)
+![image-20221027202147933](http://img.sybutterfly.top/img/202211142054490.png)
 
 > 确定打包命令和发布目录
 
-![image-20221027202246580](https://i0.hdslb.com/bfs/album/c026391bd8355cd8c7a456ef9699a64c353de4a5.png)
+![image-20221027202246580](http://img.sybutterfly.top/img/202211142054758.png)
 
 > 打包命令可以是
 
@@ -118,15 +118,15 @@ npm run build
 
 > 发布目录，这取决于你的配置文件，所以这里你的发布目录应该是public
 
-![image-20221027202556989](https://i0.hdslb.com/bfs/album/1d4444bcec95b168bf949eeebe1f6280e2550821.png)
+![image-20221027202556989](http://img.sybutterfly.top/img/202211142054532.png)
 
 >确认好信息之后即可打包，完成后将在项目名下出现netlify给你分配的地址
 
-![image-20221027202958702](https://i0.hdslb.com/bfs/album/9e1527f66f4949f703500d47cc5bef7a09f93595.png)
+![image-20221027202958702](http://img.sybutterfly.top/img/202211142054442.png)
 
 >如果你不喜欢这个名儿，可以在Domain setting设置中修改，或者绑定自己的域名
 
-![image-20221027203301777](https://i0.hdslb.com/bfs/album/2a0da27730422c5ff34f2eee8f4a702f0149308b.png)
+![image-20221027203301777](http://img.sybutterfly.top/img/202211142054409.png)
 
 至此，你就可以通过域名直接访问这个项目了，并且在你推送新的代码到GitHub后，他也会自动更新。
 
@@ -154,53 +154,53 @@ https://smms.app/
 
 >设置picgo中的smms
 
-![image-20221027210837183](https://i0.hdslb.com/bfs/album/0293041597b55d0c0cbc20ee62e1cf7a20db2071.png)
+![image-20221027210837183](http://img.sybutterfly.top/img/202211142054763.png)
 
 >token在smms仪表盘获取
 
-![image-20221027211000737](https://i0.hdslb.com/bfs/album/7ae03736d9f1d7b6edecb15c4c1bdf8d969e6cf5.png)
+![image-20221027211000737](http://img.sybutterfly.top/img/202211142054561.png)
 
 ### 4.3、BiliBili图床
 
 这个是聪明的网页发现的，并不是真的图床，需要PicGo插件，相对于smms更快，但是个人认为可能会丢失无价的数据
 
-![image-20221027211159025](https://i0.hdslb.com/bfs/album/0f71c9d6d4fa24f17fcd3fc1a5d0945b1440f678.png)
+![image-20221027211159025](http://img.sybutterfly.top/img/202211142054956.png)
 
 >配置插件
 
-![image-20221027211226513](https://i0.hdslb.com/bfs/album/ba23ecd0549e0cbc21eeaa0db7fda1ebaff4d406.png)
+![image-20221027211226513](http://img.sybutterfly.top/img/202211142054640.png)
 
 >获取sessdata，需要你登录bilibili网页端，后F12打开控制面板，在如下路径获取
 
-![image-20221027211127541](https://i0.hdslb.com/bfs/album/6b76d3d68ff20170c220da2a8576b0b82032501c.png)
+![image-20221027211127541](http://img.sybutterfly.top/img/202211142054276.png)
 
 
 
 > 而后你可以在PicGo主动测试是否成功，注意由于SESSDATA是动态的，所以你可能需要手动定时更新
 
-![image-20221027211426736](https://i0.hdslb.com/bfs/album/c063597e9cacf3d579448ad99391fc2520472706.png)
+![image-20221027211426736](http://img.sybutterfly.top/img/202211142054021.png)
 
 > 在这里你可以查看上传的图片
 
-![image-20221027212332768](https://i0.hdslb.com/bfs/album/5d0b964310c4da339a96d76f6f3f54ef1e2855a2.png)
+![image-20221027212332768](http://img.sybutterfly.top/img/202211142054489.png)
 
 ### 4.4、Typora偏好设置
 
-![image-20221027210630266](https://i0.hdslb.com/bfs/album/b7a57d84eee904562293538bd4951f5069af5704.png)
+![image-20221027210630266](http://img.sybutterfly.top/img/202211142055338.png)
 
 > 测试，点击验证将进行测试
 
-![image-20221027210755490](https://i0.hdslb.com/bfs/album/9fc786e180659195ab3bee8426f5ca0aa563f555.png)
+![image-20221027210755490](http://img.sybutterfly.top/img/202211142055015.png)
 
 > 配置成功后，你可以在Typora一键上传
 
-![image-20221027211946080](https://i0.hdslb.com/bfs/album/d361952d5709559cdbdedcbd9079a38d85e6558c.png)
+![image-20221027211946080](http://img.sybutterfly.top/img/202211142055577.png)
 
 
 
 >至此本文完结咯
 
-![E09F7235D9747A476BD0B66536D30B2D](https://i0.hdslb.com/bfs/album/a69f1664244ed5579ded4eb9bf671083208711cc.jpg)
+![E09F7235D9747A476BD0B66536D30B2D](http://img.sybutterfly.top/img/202211142055478.jpeg)
 
 ::: warning
 Thanks for reading！🎉 🎉 🎉 🎉 

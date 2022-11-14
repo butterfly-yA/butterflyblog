@@ -14,7 +14,7 @@ publish: true   # 发布
 
 # Nginx基本使用
 
-![nginx](https://i0.hdslb.com/bfs/album/77552569f50ea0a22a66a3dc267dfb91ebce3259.png)
+![nginx](http://img.sybutterfly.top/img/202211142109274.png)
 
 本文基于docker安装nginx和centos7，出现位置问题的话，建议直接关键字百度，这里我们采用docker容器的形式安装，相关命令如下
 
@@ -53,7 +53,7 @@ docker run \
 
 ## 1、nginx.conf配置结构
 
-![20210731155655187](https://i0.hdslb.com/bfs/album/7bbe047916e82ef2c41f8bc055026e2e0a835d1a.png)
+![20210731155655187](http://img.sybutterfly.top/img/202211142109845.png)
 
 ### 1.1、默认配置
 
@@ -154,7 +154,7 @@ location /img/ {
 
 基本结构只需要一个controller和跳转页面即可，端口配置8080
 
-![image-20221111201025222](https://i0.hdslb.com/bfs/album/1187544983b58ac0c24808e162af0c69569a8a90.png)
+![image-20221111201025222](http://img.sybutterfly.top/img/202211142109068.png)
 
 打包后发送到服务器，后台运行jar包命令如下
 
@@ -196,7 +196,7 @@ kill -9 pid  #杀死进程
 docker restart nginx
 ```
 
-![image-20221111204731213](https://i0.hdslb.com/bfs/album/9b4e7acdd1b69e5353d4cb7d8c58d509b79c7cf0.png)
+![image-20221111204731213](http://img.sybutterfly.top/img/202211142109290.png)
 
 访问，出现你springboot项目中的预期页面表示成功
 

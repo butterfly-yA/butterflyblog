@@ -1,6 +1,6 @@
 ---
 title: Eureka的基本使用和Ribbon的原理浅析
-date: '2021-08-07'
+date: '2022-08-07'
 categories:   # 分类
  - SpringCloud
 tags:   # 标签
@@ -43,7 +43,7 @@ springcloud是一个非常优秀的微服务框架，要管理众多的服务，
 
 ### 2.1、项目初始化
 
-![20210901090745](https://i0.hdslb.com/bfs/album/d8ea97093876815491210e39c7c004beb8a27e25.webp)
+![20210901090745](http://img.sybutterfly.top/img/202211142056215.webp)
 
 cloud-demo：父工程，管理依赖
 
@@ -64,11 +64,11 @@ cloud-demo：父工程，管理依赖
 
 >IDEA中打开services方便多服务启动
 
-![image-20221028210729372](https://i0.hdslb.com/bfs/album/ec7625c7ed1022d9de1c898c809fa34f54c0c737.png)
+![image-20221028210729372](http://img.sybutterfly.top/img/202211142056444.png)
 
 > 启动两个项目,浏览器访问测试用例即可
 
-![image-20221028210849428](https://i0.hdslb.com/bfs/album/52a4a3774a9eac2167428a71631735554d3b07e1.png)
+![image-20221028210849428](http://img.sybutterfly.top/img/202211142056066.png)
 
 这里我们可以看见order服务并没有查询出我们需要的user信息，那么在单体架构下，我们可以直接调用对应的userservice进行数据库查询，但在微服务架构下如何查询呢？
 
@@ -122,11 +122,11 @@ public class OrderService {
 
 >重启order服务后，再次测试，数据到达预期
 
-![image-20221028211459473](https://i0.hdslb.com/bfs/album/9d18dce11729a64178ec36f9d2c7db4da2f9440c.png)
+![image-20221028211459473](http://img.sybutterfly.top/img/202211142056845.png)
 
 但是新的问题又出现了，这里我们进行了硬编码，而且在集群的环境下，你不能这样仅仅写一个接口地址在这里，那么我们就需要一个工具帮助我们管理这些繁多的微服务，也就我们说的注册中心
 
-![image-20221028211650858](https://i0.hdslb.com/bfs/album/cd49edf39694b5b4a8225bebf27b3bc220bb72d8.png)
+![image-20221028211650858](http://img.sybutterfly.top/img/202211142056027.png)
 
 ### 2.4、Eureka Service的编写
 
@@ -168,7 +168,7 @@ public class EurekaApplication {
 
 #### 2.4.4、启动该类，访问10086
 
-![image-20221028212712720](https://i0.hdslb.com/bfs/album/eaf57b2703cdc5fd0ef5d7496b10928b54ca745e.png)
+![image-20221028212712720](http://img.sybutterfly.top/img/202211142056516.png)
 
 >可以看到当前存在一个已注册的服务，就是它本身，UP表示存活，后面是地址
 
@@ -252,11 +252,11 @@ eureka:
 
 >重启服务，注意先启动注册中心，在启动其他两个服务，可以看见两个服务已经注册
 
-![image-20221028213640192](https://i0.hdslb.com/bfs/album/19d54244301e70667d41ad4f62a11719aede899e.png)
+![image-20221028213640192](http://img.sybutterfly.top/img/202211142057268.png)
 
 >测试，可以发现我们这样依旧能够调用服务访问数据
 
-![image-20221028213922392](https://i0.hdslb.com/bfs/album/9c741a621afbe339f86f309d62f5d3fae7af0e39.png)
+![image-20221028213922392](http://img.sybutterfly.top/img/202211142057913.png)
 
 ### 2.6、原理浅析
 
@@ -264,19 +264,19 @@ Eureka将注册我们的服务，开启` @LoadBalanced`后，spring将启用 `Ri
 
 ### 2.7、客户端集群，多实例
 
-![image-20221029091506587](https://i0.hdslb.com/bfs/album/cc21a6cf0dcb80f4aa032fdca5b0784cc73e51c6.png)
+![image-20221029091506587](http://img.sybutterfly.top/img/202211142057794.png)
 
 >修改配置，8082端口
 
-![image-20221029091557806](https://i0.hdslb.com/bfs/album/350b41e77cda3f06b2d744f3db69af382076b399.png)
+![image-20221029091557806](http://img.sybutterfly.top/img/202211142057310.png)
 
 >测试，成功，并且控制台两个服务都在打印日志，开启了负载均衡
 
-![image-20221029091703645](https://i0.hdslb.com/bfs/album/a2346056cfafc170c5c6e5da9af8502084295dcd.png)
+![image-20221029091703645](http://img.sybutterfly.top/img/202211142057412.png)
 
 ## 3.工作流程浅析
 
-![20210901090919](https://i0.hdslb.com/bfs/album/2803c5cdaf3aa45dc08594335c491fe7d59990dc.webp)
+![20210901090919](http://img.sybutterfly.top/img/202211142057780.webp)
 
 **order-service 如何得知 user-service 实例地址？**
 
@@ -302,7 +302,7 @@ order-service从实例列表中利用**负载均衡算法**选中一个实例地
 
 **SpringCloud 底层提供了一个名为 Ribbon 的组件，来实现负载均衡功能。**
 
-![20210901091242](https://i0.hdslb.com/bfs/album/a036a8b43dafe508cc371050d8047e2841b6b320.webp)
+![20210901091242](http://img.sybutterfly.top/img/202211142057532.webp)
 
 >请求并不是直接与eureka注册中心交互，而是通过Ribbon组件，利用Ribbon实现了负载均衡和服务的拉取
 
@@ -312,7 +312,7 @@ order-service从实例列表中利用**负载均衡算法**选中一个实例地
 
 我们进行源码跟踪：
 
-![20210901091323](https://i0.hdslb.com/bfs/album/a342bbcb223d35762cf414fe8fdc6504160598ec.webp)
+![20210901091323](http://img.sybutterfly.top/img/202211142057210.webp)
 
 
 
@@ -326,36 +326,36 @@ order-service从实例列表中利用**负载均衡算法**选中一个实例地
 
 继续跟入 `execute()` 方法：
 
-![image-20221029094546700](https://i0.hdslb.com/bfs/album/4bed1e184f61e48f0ff816d39c7636eb99497ecc.png)
+![image-20221029094546700](http://img.sybutterfly.top/img/202211142057136.png)
 
 - `getLoadBalancer(serviceId)`：根据服务id获取 `ILoadBalancer`，而 `ILoadBalancer` 会拿着服务 id 去 eureka 中获取服务列表。
 - `getServer(loadBalancer)`：利用内置的负载均衡算法，从服务列表中选择一个。在图中**可以看到获取了8082端口的服务**
 
 可以看到获取服务时，通过一个 `getServer()` 方法来做负载均衡:
 
-![image-20221029094620584](https://i0.hdslb.com/bfs/album/11d800a5cad2b1e1882fe7974a15dce6d89cd979.png)
+![image-20221029094620584](http://img.sybutterfly.top/img/202211142057939.png)
 
 
 
 我们继续跟入：
 
-![image-20221029094637340](https://i0.hdslb.com/bfs/album/058365b8dc2b2776ac5c534d659e5c3772fd3194.png)
+![image-20221029094637340](http://img.sybutterfly.top/img/202211142057922.png)
 
 
 
 继续跟踪源码 `chooseServer()` 方法，发现这么一段代码：
 
-![image-20221029094655005](https://i0.hdslb.com/bfs/album/c230340dab4e43c9388ef1036e9690fa37c6dab3.png)
+![image-20221029094655005](http://img.sybutterfly.top/img/202211142057888.png)
 
 我们看看这个 `rule` 是谁：
 
-![image-20221029094705482](https://i0.hdslb.com/bfs/album/c7648f8c81c7af4cfd753dd13bb7837acf20013e.png)
+![image-20221029094705482](http://img.sybutterfly.top/img/202211142057083.png)
 
 
 
 这里的 rule 默认值是一个 `RoundRobinRule` ，看类的介绍：
 
-![image-20221029094717862](https://i0.hdslb.com/bfs/album/268b3fbae417807fc3a24703e3c533bacac7d336.png)
+![image-20221029094717862](http://img.sybutterfly.top/img/202211142057369.png)
 
 
 
@@ -374,7 +374,7 @@ SpringCloud Ribbon 底层采用了一个拦截器，拦截了 RestTemplate 发�
 - `IRule` 利用内置负载均衡规则，从列表中选择一个，例如 localhost:8081
 - `RibbonLoadBalancerClient` 修改请求地址，用 localhost:8081 替代 userservice，得到 http://localhost:8081/user/1，发起真实请求
 
-![image-20221029094729593](https://i0.hdslb.com/bfs/album/521ed64dab24ad488b43b2a8c1242651a45b9f1a.png)
+![image-20221029094729593](http://img.sybutterfly.top/img/202211142057076.png)
 
 
 
@@ -382,7 +382,7 @@ SpringCloud Ribbon 底层采用了一个拦截器，拦截了 RestTemplate 发�
 
 负载均衡的规则都定义在 IRule 接口中，而 IRule 有很多不同的实现类：
 
-![image-20221029094742846](https://i0.hdslb.com/bfs/album/3290a5d0291e54df9f6df678bf533f6e8b585b73.png)
+![image-20221029094742846](http://img.sybutterfly.top/img/202211142057354.png)
 
 
 
@@ -429,7 +429,7 @@ userservice: # 给需要调用的微服务配置负载均衡规则，orderservic
 
 当我们启动 orderservice，第一次访问时，时间消耗会大很多，这是因为 Ribbon 懒加载的机制。
 
-![20210901091850](https://i0.hdslb.com/bfs/album/8e44ff1845fd016afb0fb168adfea4032b51feae.webp)
+![20210901091850](http://img.sybutterfly.top/img/202211142057231.webp)
 
 
 
